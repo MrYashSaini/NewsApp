@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">YS News</string>
+    <string name="viewpager">viewpager</string>
+    <string name="home">Home</string>
+    <string name="sports">Sports</string>
+    <string name="health">Health</string>
+    <string name="technology">Technology</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="science">Science</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mock_title">Main heading display here main heading display here Main heading display here main heading display here</string>
+    <string name="mock_description">main content main content</string>
+    <string name="todo">TODO</string>
+    <string name="published_at">Published At</string>
+    <string name="by_brijiesh">By Brijiesh</string>
+</resources>
