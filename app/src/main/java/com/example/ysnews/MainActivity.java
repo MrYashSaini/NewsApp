@@ -1,6 +1,7 @@
 package com.example.ysnews;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -16,14 +17,15 @@ import com.example.ysnews.Fragment.TechFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         ViewPager viewPager = findViewById(R.id.viewPager);
-
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         //set Tab layout on view pager
         tabLayout.setupWithViewPager(viewPager);

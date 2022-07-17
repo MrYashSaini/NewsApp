@@ -13,4 +13,6 @@
     <string name="todo">TODO</string>
     <string name="published_at">Published At</string>
     <string name="by_brijiesh">By Brijiesh</string>
+    <string name="ys_name">YS Name</string>
+    <string name="news_icon">news_icon</string>
 </resources>
