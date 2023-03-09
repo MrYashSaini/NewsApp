@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.example.ysnews.Adapter.Adapter;
 import com.example.ysnews.Apis.ApiUtilities;
 import com.example.ysnews.Apis.ModelClass;
 import com.example.ysnews.Apis.mainNews;
+import com.example.ysnews.CountryActivity;
 import com.example.ysnews.R;
 
 import java.util.ArrayList;
@@ -44,6 +46,8 @@ public class HomeFragment extends Fragment {
         return view;
     }
     private void findNews() {
+        CountryActivity countryActivity = new CountryActivity();
+        country = countryActivity.getCNames();
         ApiUtilities.getApiInterface().getNews(country,100,apikey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(@NonNull Call<mainNews> call, @NonNull Response<mainNews> response) {

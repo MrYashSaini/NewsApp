@@ -15,6 +15,7 @@ import com.example.ysnews.Adapter.Adapter;
 import com.example.ysnews.Apis.ApiUtilities;
 import com.example.ysnews.Apis.ModelClass;
 import com.example.ysnews.Apis.mainNews;
+import com.example.ysnews.CountryActivity;
 import com.example.ysnews.R;
 
 import java.util.ArrayList;
@@ -42,6 +43,8 @@ public class ScienceFragment extends Fragment {
         return view;
     }
     private void findNews() {
+        CountryActivity countryActivity = new CountryActivity();
+        country = countryActivity.getCNames();
         ApiUtilities.getApiInterface().getCategoryNews(country,"science",100,apikey).enqueue(new Callback<mainNews>() {
             @Override
             public void onResponse(@NonNull Call<mainNews> call, @NonNull Response<mainNews> response) {
